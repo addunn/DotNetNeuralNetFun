@@ -20,4 +20,4 @@ Will include a timelapse GIF of the application running very soon.
 <img width="1280" alt="Screenshot 2023-07-14 160521" src="https://github.com/addunn/DotNetNeuralNetFun/assets/43220218/fd3c28c0-cea4-4d3f-83d0-e86fd486366d">
 
 ### Network Stats:
-<img width="1280" alt="Screenshot 2023-07-14 160547" src="https://github.com/addunn/DotNetNeuralNetFun/assets/43220218/155920f3-fbd9-4c4a-8428-b808e4deb064">
+<img width="1280" alt="Screenshot 2023-07-14 165308" src="https://github.com/addunn/DotNetNeuralNetFun/assets/43220218/070bfc81-e742-4c50-ac3a-3db55531a51e">
