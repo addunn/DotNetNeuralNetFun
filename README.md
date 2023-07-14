@@ -1,7 +1,7 @@
 
 # Dot Net Neural Network Fun
 This was a project I did a couple years ago to understand the inner workings of a neural network as it trains. It's currently setup to train on the MNIST dataset to identify the handwritten digits. As it trains, you can see the performance and different values of the network: Cost, weights, min/max of weights and bias, etc. 
-This wasn't designed for fully training a network for production use. It's mainly for visualizing the training process and experimenting with different hyper parameters.
+This wasn't designed for fully training a network for production use. It's mainly for visualizing the training process and experimenting with different parameters.
 
 
 ## Features
@@ -14,12 +14,10 @@ This wasn't designed for fully training a network for production use. It's mainl
 
 ## UI Snapshots
 
-Coming soon.
+Will include a timelapse GIF of the application running very soon.
 
+### Network Layers and Connections:
+<img width="1280" alt="Screenshot 2023-07-14 160521" src="https://github.com/addunn/DotNetNeuralNetFun/assets/43220218/fd3c28c0-cea4-4d3f-83d0-e86fd486366d">
 
-## Installing and Running
-
-Coming soon.
-
-
-
+### Network Stats:
+<img width="1280" alt="Screenshot 2023-07-14 160547" src="https://github.com/addunn/DotNetNeuralNetFun/assets/43220218/155920f3-fbd9-4c4a-8428-b808e4deb064">
