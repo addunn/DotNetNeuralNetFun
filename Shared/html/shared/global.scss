@@ -1,0 +1,136 @@
+
+$primary-color: #04f;
+
+/* COLORS */
+$background-panel-color: darken(desaturate($primary-color, 60), 40);
+$background-panel-title-color: lighten($background-panel-color, 10);
+$background-button-color: darken($background-panel-color, 4);
+$background-button-hover-color: lighten(desaturate($background-button-color, 10), 8);
+
+$text-button-color: lighten(desaturate($background-panel-color, 35), 65);
+$text-button-color-hover: lighten($text-button-color, 15);
+$text-button-disabled-color: darken(desaturate($text-button-color, 20), 25);
+$text-panel-title-color: lighten(desaturate($background-panel-title-color, 35), 65);
+$text-panel-body-color: lighten(desaturate($background-panel-color, 35), 65);
+
+$text-shadow-light-text-color: rgba(0, 0, 0, 0.15);
+$text-shadow-dark-text-color: rgba(255, 255, 255, 0.15);
+
+$border-panel-color: $background-panel-title-color;
+$border-button-color: $background-panel-title-color;
+
+/* OTHER COLORS */
+$body-background: #000;
+
+
+/* PANELS */
+
+$panel-border-thickness: 2px;
+$panel-padding: 10px;
+$panel-section-spacing: $panel-padding;
+
+/* OTHER SIZING */
+$body-padding: 4px;
+
+/* BUTTONS */
+$button-padding-vertical: 4px;
+$button-padding-horizontal: 8px;
+$button-spacing: $panel-padding;
+$button-border-thickness: 2px;
+
+
+/* SELECTED NETWORK */
+   
+
+
+
+
+* {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	box-sizing: border-box;
+	font-family: "Bahnschrift SemiCondensed";
+	font-size: 14px;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	padding: $body-padding;
+	background: $body-background;
+}
+p {
+	line-height: 1.7em;
+}
+ul, li, button {
+	display: block;
+}
+/* PANELS */
+.panel {
+	background: $background-panel-color;
+	border: $panel-border-thickness solid $border-panel-color;
+}
+.panel-title {
+	background: $background-panel-title-color;
+	color: $text-panel-title-color;
+	text-shadow: 0 1px 0 $text-shadow-light-text-color;
+	border-bottom: $panel-border-thickness solid $border-panel-color;
+	padding: 0 $panel-padding 0 $panel-padding;
+	font-weight: normal;
+	font-size: 16px;
+}
+.panel-body {
+	color: $text-panel-body-color;
+}
+.panel-section {
+	padding: 0 $panel-padding 0 $panel-padding;
+	margin: 0 0 $panel-section-spacing 0;
+}
+.panel-section:last-child {
+	padding-bottom: $panel-padding;
+	margin: 0;
+}
+.panel-section:first-child {
+	padding-top: $panel-padding;
+}
+.panel, .panel-body, .panel-section {
+	overflow: hidden;
+}
+.button {
+	display: block;
+	float: left;
+	padding: $button-padding-vertical $button-padding-horizontal $button-padding-vertical $button-padding-horizontal;
+	background: $background-button-color;
+	color: $text-button-color;
+	text-shadow: 0 1px 0 $text-shadow-light-text-color;
+	font-weight: 400;
+	border: $button-border-thickness solid $border-button-color;
+	cursor: pointer;
+}
+.button:hover {
+	background: $background-button-hover-color;
+	color: $text-button-color-hover;
+}
+.button.disabled {
+	color: $text-button-disabled-color;
+	cursor: default !important;
+}
+.button.disabled:hover {
+	background: $background-button-color;
+}
+.panel-section > .button {
+	margin-right: $button-spacing;
+}
+.panel-section > .button:last-child {
+	margin-right: 0;
+}
+
+.hide {
+	visibility: hidden !important;
+}
+.display-none {
+	display: none !important;
+}

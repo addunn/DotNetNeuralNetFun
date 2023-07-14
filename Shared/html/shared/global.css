@@ -1,0 +1,115 @@
+/* COLORS */
+/* OTHER COLORS */
+/* PANELS */
+/* OTHER SIZING */
+/* BUTTONS */
+/* SELECTED NETWORK */
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Bahnschrift SemiCondensed";
+  font-size: 14px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 4px;
+  background: #000;
+}
+
+p {
+  line-height: 1.7em;
+}
+
+ul, li, button {
+  display: block;
+}
+
+/* PANELS */
+.panel {
+  background: #0f1524;
+  border: 2px solid #1f2947;
+}
+
+.panel-title {
+  background: #1f2947;
+  color: #d7d8db;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid #1f2947;
+  padding: 0 10px 0 10px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.panel-body {
+  color: #bcbec2;
+}
+
+.panel-section {
+  padding: 0 10px 0 10px;
+  margin: 0 0 10px 0;
+}
+
+.panel-section:last-child {
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.panel-section:first-child {
+  padding-top: 10px;
+}
+
+.panel, .panel-body, .panel-section {
+  overflow: hidden;
+}
+
+.button {
+  display: block;
+  float: left;
+  padding: 4px 8px 4px 8px;
+  background: #090c15;
+  color: #bcbec2;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  font-weight: 400;
+  border: 2px solid #1f2947;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #191f2e;
+  color: #e4e5e7;
+}
+
+.button.disabled {
+  color: gray;
+  cursor: default !important;
+}
+
+.button.disabled:hover {
+  background: #090c15;
+}
+
+.panel-section > .button {
+  margin-right: 10px;
+}
+
+.panel-section > .button:last-child {
+  margin-right: 0;
+}
+
+.hide {
+  visibility: hidden !important;
+}
+
+.display-none {
+  display: none !important;
+}
+
+/*# sourceMappingURL=global.css.map */

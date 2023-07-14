@@ -1,0 +1,453 @@
+// Utilities
+@import "../shared/global.scss";
+
+$background-network-node-color: $background-button-color;
+$background-network-node-hover-color: $background-button-hover-color;
+
+$border-network-node-color: $border-button-color;
+$border-network-list-selected-node-color: #f60;
+
+$border-selected-network-busy: $background-panel-title-color;
+
+
+/* NETWORKS LIST */
+$network-list-width: 140px;
+$network-list-node-spacing: 2px;
+$network-list-node-border-thickness: $button-border-thickness;
+
+/* GRAPHS */
+
+$graph-plot: desaturate(#0f0, 15);
+$graph-border: $border-panel-color;
+$graph-background: darken($background-panel-color, 5);
+$graph-axis: darken($text-panel-body-color, 15);
+$graph-text: lighten($text-panel-body-color, 10);
+
+/* MAJOR SECTIONS */
+
+$top-height: 129px;
+
+/* SELECTED NETWORK */
+
+
+
+#js-colors {
+	display: block;
+	position: absolute;
+	width: 1px;
+	bottom: -100px;
+	left: -500px;
+}
+#js-colors > div {
+	width: 1px;
+	height: 1px;
+}
+#graph-plot {
+	background-color: $graph-plot;
+}
+#graph-border {
+	background-color: $graph-border;
+}
+#graph-background {
+	background-color: $graph-background;
+}
+#graph-axis {
+	background-color: $graph-axis;
+}
+#graph-text {
+	background-color: $graph-text;
+}
+
+#projects-networks-lists > .panel-section {
+	padding-bottom: $panel-padding - $network-list-node-spacing;
+}
+
+/*
+#networks-list-panel-section {
+	padding-bottom: $panel-padding - $network-list-node-spacing;
+}
+*/
+#projects-list-panel {
+	width: $network-list-width + ($panel-padding * 2) + ($panel-border-thickness * 2);
+	height: 100%;
+	float: left;
+}
+
+.networks-list {
+	width: $network-list-width;
+	overflow: hidden;
+}
+.networks-list > li {
+	position: relative;
+	cursor: pointer;
+	border: $button-border-thickness solid $border-network-node-color;
+	background: $background-button-color;
+	float: left;
+	margin-bottom: $network-list-node-spacing;
+	margin-right: $network-list-node-spacing;
+	width: ($network-list-width / 3) - 1.34;
+	height: ($network-list-width / 3) - 1.34;
+}
+.networks-list > li:hover {
+	background: $background-button-hover-color;
+}
+.shrink1 > li:nth-child(3n) {
+	margin-right: 0 !important;
+}
+
+.shrink2 > li {
+	width: ($network-list-width / 4) - 1.5 !important;
+	height: ($network-list-width / 4) - 1.5 !important;
+}
+.shrink2 > li:nth-child(4n) {
+	margin-right: 0 !important;
+}
+
+.shrink3 > li {
+	width: ($network-list-width / 5) - 1.55 !important;
+	height: ($network-list-width / 5) - 1.55 !important;
+}
+.shrink3 > li:nth-child(5n) {
+	margin-right: 0 !important;
+}
+.shrink4 > li {
+	width: ($network-list-width / 6) - 1.75 !important;
+	height: ($network-list-width / 6) - 1.75 !important;
+}
+.shrink4 > li:nth-child(6n) {
+	margin-right: 0 !important;
+}
+
+.shrink5 > li {
+	width: ($network-list-width / 7) - 1.75 !important;
+	height: ($network-list-width / 7) - 1.75 !important;
+}
+.shrink5 > li:nth-child(7n) {
+	margin-right: 0 !important;
+}
+.shrink6 > li {
+	width: ($network-list-width / 8) - 1.75 !important;
+	height: ($network-list-width / 8) - 1.75 !important;
+}
+.shrink6 > li:nth-child(8n) {
+	margin-right: 0 !important;
+}
+.shrink7 > li {
+	width: ($network-list-width / 9) - 1.82 !important;
+	height: ($network-list-width / 9) - 1.82 !important;
+}
+.shrink7 > li:nth-child(9n) {
+	margin-right: 0 !important;
+}
+.shrink8 > li {
+	width: ($network-list-width / 10) - 1.82 !important;
+	height: ($network-list-width / 10) - 1.82 !important;
+}
+.shrink8 > li:nth-child(10n) {
+	margin-right: 0 !important;
+}
+
+.network-node.selected {
+	border-color: $border-network-list-selected-node-color !important;
+}
+.network-node.training {
+	border-color: #0f0 !important;
+}
+
+li.training-enabled::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	background-color: $border-network-node-color;
+	animation: sk-scaleout 1s infinite linear;
+	/* animation-direction: alternate; */
+}
+@keyframes sk-scaleout {
+	0% { 
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	} 100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+#top {
+	overflow: hidden;
+	width: 100%;
+	height: $top-height + $body-padding;
+	padding-bottom: $body-padding;
+}
+#bottom {
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+	
+}
+
+#bottom {
+	height: calc(100% - #{$top-height} - #{$body-padding});
+}
+
+
+#selected-network-panel {
+	float: left;
+	height: 100%;
+	position: relative;
+	margin-left: $body-padding;
+	width: calc(100% - (#{$network-list-width} + (#{$panel-padding} * 2) + (#{$panel-border-thickness} * 2)) - #{$body-padding});
+}
+
+
+
+
+
+
+.selected-network-loading {
+
+	position: absolute;
+	left: calc(50% - 76px);
+	top: calc(50% - 76px);
+	width: 152px;
+	height: 152px;
+	border-radius: 50%;
+		-o-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+	perspective: 1900px;
+}
+
+.selected-network-loading > div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	border-radius: 50%;
+		-o-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;	
+}
+
+.selected-network-loading-one {
+	left: 0%;
+	top: 0%;
+	animation: cssload-rotate-one 1.75s linear infinite;
+		-o-animation: cssload-rotate-one 1.75s linear infinite;
+		-ms-animation: cssload-rotate-one 1.75s linear infinite;
+		-webkit-animation: cssload-rotate-one 1.75s linear infinite;
+		-moz-animation: cssload-rotate-one 1.75s linear infinite;
+	border-bottom: 7px solid $border-selected-network-busy;
+}
+
+.selected-network-loading-two {
+	right: 0%;
+	top: 0%;
+	animation: cssload-rotate-two 1.75s linear infinite;
+		-o-animation: cssload-rotate-two 1.75s linear infinite;
+		-ms-animation: cssload-rotate-two 1.75s linear infinite;
+		-webkit-animation: cssload-rotate-two 1.75s linear infinite;
+		-moz-animation: cssload-rotate-two 1.75s linear infinite;
+	border-right: 7px solid $border-selected-network-busy;
+}
+
+.selected-network-loading-three {
+	right: 0%;
+	bottom: 0%;
+	animation: cssload-rotate-three 1.75s linear infinite;
+		-o-animation: cssload-rotate-three 1.75s linear infinite;
+		-ms-animation: cssload-rotate-three 1.75s linear infinite;
+		-webkit-animation: cssload-rotate-three 1.75s linear infinite;
+		-moz-animation: cssload-rotate-three 1.75s linear infinite;
+	border-top: 7px solid $border-selected-network-busy;
+}
+
+
+
+
+
+
+
+@keyframes cssload-rotate-one {
+	0% {
+		transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+	}
+}
+
+@-o-keyframes cssload-rotate-one {
+	0% {
+		-o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	}
+	100% {
+		-o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+	}
+}
+
+@-ms-keyframes cssload-rotate-one {
+	0% {
+		-ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	}
+	100% {
+		-ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+	}
+}
+
+@-webkit-keyframes cssload-rotate-one {
+	0% {
+		-webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	}
+	100% {
+		-webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+	}
+}
+
+@-moz-keyframes cssload-rotate-one {
+	0% {
+		-moz-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+	}
+	100% {
+		-moz-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+	}
+}
+
+@keyframes cssload-rotate-two {
+	0% {
+		transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+	}
+}
+
+@-o-keyframes cssload-rotate-two {
+	0% {
+		-o-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	}
+	100% {
+		-o-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+	}
+}
+
+@-ms-keyframes cssload-rotate-two {
+	0% {
+		-ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	}
+	100% {
+		-ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+	}
+}
+
+@-webkit-keyframes cssload-rotate-two {
+	0% {
+		-webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	}
+	100% {
+		-webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+	}
+}
+
+@-moz-keyframes cssload-rotate-two {
+	0% {
+		-moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+	}
+	100% {
+		-moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+	}
+}
+
+@keyframes cssload-rotate-three {
+	0% {
+		transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+	}
+}
+
+@-o-keyframes cssload-rotate-three {
+	0% {
+		-o-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	}
+	100% {
+		-o-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+	}
+}
+
+@-ms-keyframes cssload-rotate-three {
+	0% {
+		-ms-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	}
+	100% {
+		-ms-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+	}
+}
+
+@-webkit-keyframes cssload-rotate-three {
+	0% {
+		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	}
+	100% {
+		-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+	}
+}
+
+@-moz-keyframes cssload-rotate-three {
+	0% {
+		-moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+	}
+	100% {
+		-moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+	}
+}
+
+#canvas {
+	display: block;
+}
+
+
+#tooltip1 {
+	padding: $panel-padding;
+	top: -1000px;
+	left: -1000px;
+	text-shadow: 0 1px 0 $text-shadow-light-text-color;
+	color: $text-panel-body-color;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+	position: absolute;
+	min-width: 50px;
+	min-height: 50px;
+	border: 1px solid $border-panel-color;
+	background-color: $background-panel-color;
+
+}
+
+
+.data-columns {
+	overflow: hidden;
+	
+}
+.data-columns .left-column {
+	float: left;
+	text-align: right;
+}
+.data-columns .right-column {
+	float: left;
+	text-align: left;
+}
+.column-item {
+	font-size: 12px;
+	white-space: nowrap;
+}
+.data-columns .left-column .column-item {
+	padding-right: 4px;
+}
