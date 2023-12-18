@@ -14,7 +14,7 @@ This wasn't designed for fully training a network for production use. It's mainl
 
 ## UI Snapshots
 
-Will include a timelapse GIF of the application running very soon.
+Will include an animated timelapse GIF when I get around to it.
 
 ### Network Layers and Connections:
 <img width="1280" alt="Screenshot 2023-07-14 160521" src="https://github.com/addunn/DotNetNeuralNetFun/assets/43220218/fd3c28c0-cea4-4d3f-83d0-e86fd486366d">
